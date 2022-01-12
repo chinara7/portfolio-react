@@ -9,6 +9,7 @@ function App() {
     <div className='container-fluid'>
       <Navbar />
       <Header />
+      <AboutMe />
     </div>
   );
 }
