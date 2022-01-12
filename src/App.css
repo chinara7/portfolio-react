@@ -1,18 +1,105 @@
 :root {
-  --primary-white: #fff;
-  --primary-light-grey: #f4f4f4;
-  --primary-grey:#ccd1d9;
-  --primary-dark-grey: #666;
-  --primary-orange: #f9ab00;
-  --primary-dark: rgb(52,58,64);
-  --primary-red: #ef4035;
-  --primary-hover-red: #f33501;
-  --primary-black:#000;
-  --primary-transparent-black: rgba(0,0,0,0.7);
-  --primary-green: rgb(0,255,0);
-
+    --primary-white: #fff;
+    --primary-light-grey: #f4f4f4;
+    --primary-grey: #ccd1d9;
+    --primary-dark-grey: #666;
+    --primary-orange: #f9ab00;
+    --primary-dark: rgb(52, 58, 64);
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+    --primary-black: #000;
+    --primary-transparent-black: rgba(0, 0, 0, 0.7);
+    --primary-green: rgb(0, 255, 0);
 }
 
-.logo{
-  width: 14rem;
+/**
+* ! NAVBAR ME SECTION */
+
+nav{
+    z-index: 2;
 }
+
+nav ul {
+    overflow: hidden;
+}
+
+.logo {
+    width: 14rem;
+}
+
+nav a.nav-link {
+    font-size: 1.2rem;
+    letter-spacing: .0375rem;
+    margin: 0 .75rem;
+    color: var(--primary-white) !important;
+}
+
+nav ul li {
+    text-transform: uppercase;
+}
+
+.navbar-nav>li>a.active,
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+    border-top: .1875rem solid var(--primary-orange);
+}
+
+/**
+* ! HEADER ME SECTION */
+
+.header-wrapper {
+    position: relative;
+    background: url('./img/back.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    z-index: 1;
+}
+
+.main-info {
+    position: absolute;
+    top: -250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-info h1 {
+    color: var(--primary-orange);
+    margin-bottom: 25px;
+}
+
+.typed-text {
+    font-size: 2rem;
+    color: var(--primary-white);
+}
+
+@media(max-width:768px) {
+    .main-info h1 {
+        font-size: 1.7rem !important;
+    }
+    .typed-text {
+        font-size: 1.7rem !important;
+    }
+}
+
+.downloadcv {
+    border: 1px solid var(--primary-red);
+    padding: 0.625rem;
+    margin: 4rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: var(--primary-white);
+}
+
+.downloadcv:hover {
+    text-decoration: none;
+    background-color: var(--primary-hover-red);
+    color: var(--primary-white);
+    transition: .4s ease-in-out;
+}
+
